@@ -7,7 +7,29 @@ const CONFIG = {
     supportEmail: "suporte@clicknex.com.br",
     version: "1.0.0",
     searchMinChars: 2,
-    scrollOffset: 80
+    scrollOffset: 80,
+    pagesPath: "pages/"
+};
+
+// Mapeamento de seções para arquivos
+const PAGE_MAP = {
+    'central-ajuda': 'central-ajuda.html',
+    'conheca': 'conheca.html',
+    'modulo-dashboard': 'modulos/dashboard.html',
+    'modulo-agenda': 'modulos/agenda.html',
+    'modulo-vendas': 'modulos/vendas.html',
+    'modulo-projetos': 'modulos/projetos.html',
+    'modulo-atendimento': 'modulos/atendimento.html',
+    'modulo-inteligencia': 'modulos/inteligencia.html',
+    'modulo-equipe': 'modulos/equipe.html',
+    'modulo-sistema': 'modulos/sistema.html',
+    'pre-requisitos': 'diretrizes/pre-requisitos.html',
+    'suporte-tecnico': 'diretrizes/suporte-tecnico.html',
+    'manutencao': 'diretrizes/manutencao.html',
+    'api-oficial': 'diretrizes/api-oficial.html',
+    'privacidade': 'diretrizes/privacidade.html',
+    'lid-whatsapp': 'diretrizes/lid-whatsapp.html',
+    'termos-condicoes': 'diretrizes/termos-condicoes.html'
 };
 
 // ========================================
@@ -123,6 +145,9 @@ function initializeEventListeners() {
         });
     }
     
+    // Dropdown navigation
+    initializeDropdowns();
+    
     // Fechar menu ao redimensionar para desktop
     window.addEventListener('resize', handleResize);
     
@@ -169,8 +194,8 @@ function handleNavigation(e) {
     DOM.navItems.forEach(item => item.classList.remove('active'));
     this.classList.add('active');
     
-    // Mostrar seção correspondente
-    showSection(targetSection);
+    // Carregar e mostrar seção correspondente
+    loadSection(targetSection);
     
     // Fechar menu mobile
     closeMobileMenu();
@@ -180,6 +205,73 @@ function handleNavigation(e) {
     
     // Atualizar URL sem recarregar
     updateURL(targetSection);
+}
+
+async function loadSection(sectionId) {
+    const contentWrapper = document.querySelector('.content-wrapper');
+    
+    // Se a seção já existe no DOM (seções estáticas), apenas mostrar
+    const existingSection = document.getElementById(sectionId);
+    if (existingSection) {
+        showSection(sectionId);
+        return;
+    }
+    
+    // Se tem mapeamento para arquivo externo, carregar
+    if (PAGE_MAP[sectionId]) {
+        try {
+            const response = await fetch(`${CONFIG.pagesPath}${PAGE_MAP[sectionId]}`);
+            if (!response.ok) throw new Error('Página não encontrada');
+            
+            const html = await response.text();
+            
+            // Criar nova seção
+            const newSection = document.createElement('section');
+            newSection.id = sectionId;
+            newSection.className = 'content-section';
+            newSection.innerHTML = html;
+            
+            // Adicionar ao DOM
+            contentWrapper.appendChild(newSection);
+            
+            // Mostrar seção
+            showSection(sectionId);
+            
+            // Reinicializar event listeners para novos elementos
+            initializeSectionListeners(newSection);
+            
+        } catch (error) {
+            console.error('Erro ao carregar seção:', error);
+            showErrorMessage('Erro ao carregar conteúdo. Tente novamente.');
+        }
+    } else {
+        // Seção não encontrada
+        showSection(sectionId);
+    }
+}
+
+function initializeSectionListeners(section) {
+    // Reinicializar botões de navegação
+    const navButtons = section.querySelectorAll('.btn-nav');
+    navButtons.forEach(button => {
+        button.addEventListener('click', handleNextNavigation);
+    });
+    
+    // Reinicializar links de política
+    const policyLinks = section.querySelectorAll('.policy-link, .toc-numbered a, .text-link');
+    policyLinks.forEach(link => {
+        link.addEventListener('click', handlePolicyLinkClick);
+    });
+}
+
+function showErrorMessage(message) {
+    const contentWrapper = document.querySelector('.content-wrapper');
+    contentWrapper.innerHTML = `
+        <div class="error-message">
+            <h2>⚠️ ${message}</h2>
+            <button class="btn-nav" onclick="location.reload()">Recarregar Página</button>
+        </div>
+    `;
 }
 
 function showSection(sectionId) {
@@ -368,6 +460,25 @@ function handlePolicyLinkClick(e) {
             });
         }
     }
+}
+
+// ========================================
+// DROPDOWN NAVIGATION
+// ========================================
+function initializeDropdowns() {
+    const dropdownButtons = document.querySelectorAll('.nav-dropdown');
+    
+    dropdownButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const dropdownId = this.getAttribute('data-dropdown');
+            const dropdownContent = document.getElementById(dropdownId);
+            
+            // Toggle open class
+            this.classList.toggle('open');
+            dropdownContent.classList.toggle('open');
+        });
+    });
 }
 
 // ========================================
