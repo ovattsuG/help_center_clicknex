@@ -1,0 +1,250 @@
+<div class="breadcrumb">
+    <a href="#atendimento">Atendimento</a>
+    <span>/</span>
+    <span>Campanhas (Disparos API)</span>
+</div>
+
+<div class="module-header">
+    <div class="module-icon">📨</div>
+    <h1>Campanhas (Disparos API)</h1>
+    <p class="module-description">
+        Envie mensagens em massa via API Oficial e Não Oficial do WhatsApp
+    </p>
+</div>
+
+<div class="content-text">
+    <h2>O que são Campanhas?</h2>
+    <p>
+        Campanhas são disparos de mensagens do WhatsApp realizados através da API Oficial (WABA) 
+        e API Não Oficial. Permitem enviar mensagens para múltiplos contatos de forma automatizada, 
+        respeitando as políticas do WhatsApp.
+    </p>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">✅</div>
+            <h3>API Oficial (WABA)</h3>
+            <p>Maior confiabilidade e recursos avançados</p>
+        </div>
+        <div class="info-card">
+            <div class="card-icon">⚡</div>
+            <h3>API Não Oficial</h3>
+            <p>Mais flexível, ideal para testes</p>
+        </div>
+        <div class="info-card">
+            <div class="card-icon">📊</div>
+            <h3>Relatórios</h3>
+            <p>Acompanhe entregas e visualizações</p>
+        </div>
+    </div>
+
+    <h2>Como Utilizar</h2>
+    
+    <div class="feature-section">
+        <h3>Passo 1: Acessar o Módulo</h3>
+        <ol class="step-list">
+            <li>No menu lateral, clique em <strong>Atendimento</strong></li>
+            <li>Selecione <strong>Campanhas</strong></li>
+            <li>Você verá a lista de campanhas existentes</li>
+        </ol>
+    </div>
+
+    <div class="feature-section">
+        <h3>Passo 2: Criar Nova Campanha</h3>
+        <ol class="step-list">
+            <li>Clique no botão <strong>"Nova Campanha"</strong></li>
+            <li>Preencha os dados básicos:
+                <ul>
+                    <li><strong>Nome da Campanha:</strong> Identificação interna</li>
+                    <li><strong>Descrição:</strong> Objetivo da campanha</li>
+                    <li><strong>Canal:</strong> Selecione o número do WhatsApp</li>
+                </ul>
+            </li>
+            <li>Clique em <strong>"Avançar"</strong></li>
+        </ol>
+    </div>
+
+    <div class="feature-section">
+        <h3>Passo 3: Selecionar Destinatários</h3>
+        <p>Você pode escolher os destinatários de 3 formas:</p>
+        <ul>
+            <li><strong>Lista de Contatos:</strong> Selecione uma lista pré-cadastrada</li>
+            <li><strong>Importar CSV:</strong> Faça upload de arquivo com números</li>
+            <li><strong>Manual:</strong> Digite os números manualmente</li>
+        </ul>
+        
+        <div class="tips-box">
+            <h4>💡 Formato do CSV</h4>
+            <p>O arquivo CSV deve conter uma coluna com os números no formato:</p>
+            <ul>
+                <li>5511999999999 (com DDI e DDD)</li>
+                <li>Sem espaços, traços ou parênteses</li>
+                <li>Um número por linha</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="feature-section">
+        <h3>Passo 4: Criar a Mensagem</h3>
+        
+        <h4>Para API Oficial (WABA):</h4>
+        <ol class="step-list">
+            <li>Selecione um <strong>Template Aprovado</strong> pela Meta</li>
+            <li>Preencha as variáveis do template (se houver)</li>
+            <li>Visualize a prévia da mensagem</li>
+        </ol>
+
+        <div class="alert-box">
+            <h4>⚠️ Importante</h4>
+            <p>
+                Na API Oficial, você só pode usar templates previamente aprovados pela Meta. 
+                Não é possível enviar mensagens livres.
+            </p>
+        </div>
+
+        <h4>Para API Não Oficial:</h4>
+        <ol class="step-list">
+            <li>Digite a mensagem livremente</li>
+            <li>Adicione variáveis personalizadas (opcional):
+                <ul>
+                    <li><code>{{nome}}</code> - Nome do contato</li>
+                    <li><code>{{empresa}}</code> - Nome da empresa</li>
+                    <li><code>{{custom1}}</code> - Campo personalizado</li>
+                </ul>
+            </li>
+            <li>Adicione mídias (imagem, vídeo, documento)</li>
+        </ol>
+    </div>
+
+    <div class="feature-section">
+        <h3>Passo 5: Configurar Envio</h3>
+        <ul>
+            <li><strong>Envio Imediato:</strong> Dispara assim que confirmar</li>
+            <li><strong>Agendar:</strong> Escolha data e hora para envio</li>
+            <li><strong>Intervalo entre mensagens:</strong> Defina delay (recomendado: 3-5 segundos)</li>
+            <li><strong>Horário de envio:</strong> Respeite horário comercial (8h-20h)</li>
+        </ul>
+
+        <div class="tips-box">
+            <h4>💡 Boas Práticas</h4>
+            <ul>
+                <li>Evite enviar fora do horário comercial</li>
+                <li>Use intervalo de pelo menos 3 segundos entre mensagens</li>
+                <li>Teste com poucos contatos antes de enviar para todos</li>
+                <li>Sempre ofereça opção de descadastro</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="feature-section">
+        <h3>Passo 6: Revisar e Enviar</h3>
+        <ol class="step-list">
+            <li>Revise todos os dados da campanha</li>
+            <li>Verifique a quantidade de destinatários</li>
+            <li>Confira a mensagem e variáveis</li>
+            <li>Clique em <strong>"Confirmar e Enviar"</strong></li>
+        </ol>
+    </div>
+
+    <h2>Acompanhamento da Campanha</h2>
+    
+    <div class="feature-section">
+        <h3>Status da Campanha</h3>
+        <ul>
+            <li><strong>Aguardando:</strong> Campanha agendada, aguardando horário</li>
+            <li><strong>Em Andamento:</strong> Mensagens sendo enviadas</li>
+            <li><strong>Concluída:</strong> Todos os envios finalizados</li>
+            <li><strong>Pausada:</strong> Campanha pausada manualmente</li>
+            <li><strong>Cancelada:</strong> Campanha cancelada antes de concluir</li>
+        </ul>
+    </div>
+
+    <div class="feature-section">
+        <h3>Métricas Disponíveis</h3>
+        <ul>
+            <li><strong>Total de Envios:</strong> Quantidade de mensagens enviadas</li>
+            <li><strong>Entregues:</strong> Mensagens que chegaram ao destinatário</li>
+            <li><strong>Lidas:</strong> Mensagens visualizadas (apenas API Oficial)</li>
+            <li><strong>Falhas:</strong> Mensagens que não foram entregues</li>
+            <li><strong>Taxa de Entrega:</strong> Percentual de sucesso</li>
+        </ul>
+    </div>
+
+    <h2>Recursos Avançados</h2>
+
+    <div class="feature-section">
+        <h3>Personalização com Variáveis</h3>
+        <p>Use variáveis para personalizar cada mensagem:</p>
+        <ul>
+            <li><code>{{nome}}</code> - Nome do contato</li>
+            <li><code>{{empresa}}</code> - Nome da empresa</li>
+            <li><code>{{email}}</code> - Email do contato</li>
+            <li><code>{{custom1}}</code> a <code>{{custom5}}</code> - Campos personalizados</li>
+        </ul>
+
+        <p><strong>Exemplo:</strong></p>
+        <div class="code-block">
+            <pre>Olá {{nome}}! 
+
+Temos uma oferta especial para {{empresa}}.
+
+Acesse: www.exemplo.com/{{custom1}}</pre>
+        </div>
+    </div>
+
+    <div class="feature-section">
+        <h3>Segmentação de Público</h3>
+        <p>Crie listas segmentadas por:</p>
+        <ul>
+            <li>Tags/Etiquetas</li>
+            <li>Funil de vendas</li>
+            <li>Última interação</li>
+            <li>Campos personalizados</li>
+        </ul>
+    </div>
+
+    <div class="alert-box">
+        <h4>⚠️ Políticas do WhatsApp</h4>
+        <ul>
+            <li>Não envie spam</li>
+            <li>Obtenha consentimento antes de enviar</li>
+            <li>Ofereça opção de descadastro</li>
+            <li>Respeite horários comerciais</li>
+            <li>Não envie conteúdo proibido (violência, drogas, etc)</li>
+        </ul>
+    </div>
+
+    <h2>Troubleshooting</h2>
+
+    <div class="feature-section">
+        <h3>Mensagens não estão sendo entregues</h3>
+        <p><strong>Possíveis causas:</strong></p>
+        <ul>
+            <li>Números inválidos ou bloqueados</li>
+            <li>Conta do WhatsApp banida</li>
+            <li>Template não aprovado (API Oficial)</li>
+            <li>Limite de envios atingido</li>
+        </ul>
+        <p><strong>Solução:</strong> Verifique o status da conta e os logs de erro</p>
+    </div>
+
+    <div class="feature-section">
+        <h3>Campanha pausada automaticamente</h3>
+        <p><strong>Possíveis causas:</strong></p>
+        <ul>
+            <li>Taxa de falha muito alta (>30%)</li>
+            <li>Muitos bloqueios de usuários</li>
+            <li>Limite de API atingido</li>
+        </ul>
+        <p><strong>Solução:</strong> Revise a lista de contatos e aguarde 24h antes de tentar novamente</p>
+    </div>
+
+    <div class="navigation-buttons">
+        <button class="btn-nav" data-next="atendimento-templates">
+            Próximo: Templates
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </div>
+</div>

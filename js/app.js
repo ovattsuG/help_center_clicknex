@@ -13,26 +13,67 @@ const CONFIG = {
 
 // Mapeamento de seções para arquivos
 const PAGE_MAP = {
-    'central-ajuda': 'central-ajuda.html',
+    // Páginas principais
     'conheca': 'conheca.html',
-    'modulo-dashboard': 'modulos/dashboard.html',
-    'modulo-agenda': 'modulos/agenda.html',
-    'modulo-vendas': 'modulos/vendas.html',
-    'modulo-projetos': 'modulos/projetos.html',
-    'modulo-atendimento': 'modulos/atendimento.html',
-    'modulo-inteligencia': 'modulos/inteligencia.html',
-    'modulo-equipe': 'modulos/equipe.html',
-    'modulo-sistema': 'modulos/sistema.html',
+    
+    // Dashboard
+    'dashboard': 'dashboard/dashboard.html',
+    
+    // Agenda
+    'agenda-agendamentos': 'agenda/agendamentos.html',
+    'agenda-relatorios': 'agenda/relatorios.html',
+    
+    // Vendas
+    'vendas-negocios': 'vendas/negocios.html',
+    'vendas-leads': 'vendas/leads.html',
+    'vendas-organizacoes': 'vendas/organizacoes.html',
+    'vendas-produtos': 'vendas/produtos.html',
+    'vendas-etiquetas': 'vendas/etiquetas.html',
+    
+    // Projetos
+    'projetos-projetos': 'projetos/projetos.html',
+    'projetos-tarefas': 'projetos/tarefas.html',
+    'projetos-templates': 'projetos/templates.html',
+    'projetos-acesso-cliente': 'projetos/acesso-cliente.html',
+    
+    // Atendimento
+    'atendimento-whatsapp': 'atendimento/whatsapp.html',
+    'atendimento-campanhas': 'atendimento/campanhas.html',
+    'atendimento-templates': 'atendimento/templates.html',
+    'atendimento-grupos': 'atendimento/grupos.html',
+    'atendimento-agentes-ia': 'atendimento/agentes-ia.html',
+    'atendimento-chatbots': 'atendimento/chatbots.html',
+    
+    // Inteligência
+    'inteligencia-rastreamento': 'inteligencia/rastreamento.html',
+    'inteligencia-padroes': 'inteligencia/padroes.html',
+    'inteligencia-relatorios': 'inteligencia/relatorios.html',
+    
+    // Equipes
+    'equipes-operadores': 'equipes/operadores.html',
+    'equipes-funcoes': 'equipes/funcoes.html',
+    'equipes-setores': 'equipes/setores.html',
+    
+    // Sistema
+    'sistema-config-whatsapp': 'sistema/config-whatsapp.html',
+    'sistema-api-oficial-meta': 'sistema/api-oficial-meta.html',
+    'sistema-tabulacoes': 'sistema/tabulacoes.html',
+    'sistema-variaveis': 'sistema/variaveis.html',
+    'sistema-auditoria': 'sistema/auditoria.html',
+    'sistema-configuracoes': 'sistema/configuracoes.html',
+    
+    // Diretrizes
     'pre-requisitos': 'diretrizes/pre-requisitos.html',
     'suporte-tecnico': 'diretrizes/suporte-tecnico.html',
     'manutencao': 'diretrizes/manutencao.html',
     'api-oficial': 'diretrizes/api-oficial.html',
-    'configurar-waba': 'api/configurar-waba.html',
-    'cadastro-waba-beta': 'api/cadastro-waba-beta.html',
-    'exemplo-n8n-waba': 'api/exemplo-n8n-waba.html',
     'privacidade': 'diretrizes/privacidade.html',
     'lid-whatsapp': 'diretrizes/lid-whatsapp.html',
-    'termos-condicoes': 'diretrizes/termos-condicoes.html'
+    'termos-condicoes': 'diretrizes/termos-condicoes.html',
+    
+    // API
+    'configurar-waba': 'api/configurar-waba.html',
+    'cadastro-waba-beta': 'api/cadastro-waba-beta.html'
 };
 
 // ========================================
@@ -61,6 +102,13 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeEventListeners();
     initializeScrollSpy();
     sanitizeSearchInput();
+    
+    // Gerar sumário da página inicial
+    const initialSection = document.querySelector('.content-section.active');
+    if (initialSection) {
+        updateTableOfContents(initialSection);
+    }
+    
     console.log(`${CONFIG.systemName} v${CONFIG.version} - Central de Ajuda carregada`);
 });
 
@@ -221,6 +269,7 @@ async function loadSection(sectionId) {
         console.log('✅ Seção já existe no DOM, apenas mostrando');
         showSection(sectionId);
         window.scrollTo({ top: 0, behavior: 'smooth' });
+        updateTableOfContents(existingSection);
         return;
     }
     
@@ -251,6 +300,9 @@ async function loadSection(sectionId) {
             
             // Scroll para o topo
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Atualizar sumário
+            updateTableOfContents(newSection);
             
             // Reinicializar event listeners para novos elementos
             initializeSectionListeners(newSection);
@@ -412,6 +464,103 @@ function sanitizeSearchInput() {
             // Prevenir XSS básico
             this.value = sanitizeInput(this.value);
         });
+    }
+}
+
+// ========================================
+// TABLE OF CONTENTS (Sumário Automático)
+// ========================================
+function updateTableOfContents(section) {
+    const tocList = document.getElementById('tocList');
+    if (!tocList) return;
+    
+    // Limpar sumário atual
+    tocList.innerHTML = '';
+    
+    // Buscar todos os H2 na seção
+    const headings = section.querySelectorAll('h2');
+    
+    if (headings.length === 0) {
+        tocList.innerHTML = '<li style="color: var(--color-text-muted); font-size: 12px;">Nenhum tópico disponível</li>';
+        return;
+    }
+    
+    headings.forEach((heading, index) => {
+        // Criar ID se não existir
+        if (!heading.id) {
+            heading.id = `toc-${index}-${heading.textContent.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')}`;
+        }
+        
+        // Criar item do sumário
+        const li = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = `#${heading.id}`;
+        link.className = 'toc-link';
+        link.textContent = heading.textContent;
+        
+        // Adicionar evento de clique
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.getElementById(heading.id);
+            if (target) {
+                const offsetTop = target.offsetTop - CONFIG.scrollOffset - 20;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+                
+                // Atualizar link ativo
+                document.querySelectorAll('.toc-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            }
+        });
+        
+        li.appendChild(link);
+        tocList.appendChild(li);
+    });
+    
+    // Ativar scroll spy para o sumário
+    initializeTocScrollSpy();
+}
+
+function initializeTocScrollSpy() {
+    let ticking = false;
+    
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                updateActiveTocLink();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+}
+
+function updateActiveTocLink() {
+    const tocLinks = document.querySelectorAll('.toc-link');
+    const scrollPosition = window.scrollY + 100;
+    
+    let activeLink = null;
+    
+    tocLinks.forEach(link => {
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            const elementTop = targetElement.offsetTop;
+            const elementBottom = elementTop + targetElement.offsetHeight;
+            
+            if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
+                activeLink = link;
+            }
+        }
+    });
+    
+    // Atualizar classes
+    tocLinks.forEach(link => link.classList.remove('active'));
+    if (activeLink) {
+        activeLink.classList.add('active');
     }
 }
 
