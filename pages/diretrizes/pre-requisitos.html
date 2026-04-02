@@ -1,0 +1,161 @@
+<div class="breadcrumb">
+    <a href="#diretrizes">Diretrizes e Políticas</a>
+    <span>/</span>
+    <span>Pré-requisitos de instalação e utilização</span>
+</div>
+
+<div class="document-header">
+    <div class="document-icon">⚙️</div>
+    <h1>Pré-requisitos de instalação e utilização</h1>
+    <p class="hero-description">Requisitos para instalação e utilização do CLICKNEX</p>
+</div>
+
+<div class="content-text document-content">
+    <h2 id="requisitos-servidor">Requisitos de Servidor (VPS)</h2>
+    <p>A VPS onde o sistema será instalado deverá satisfazer os seguintes requisitos mínimos:</p>
+    
+    <div class="requirements-grid">
+        <div class="requirement-card">
+            <div class="req-icon">💾</div>
+            <h4>Memória RAM</h4>
+            <p>16GB ou mais</p>
+        </div>
+        <div class="requirement-card">
+            <div class="req-icon">⚡</div>
+            <h4>Processamento</h4>
+            <p>4 vCPUs ou mais</p>
+        </div>
+        <div class="requirement-card">
+            <div class="req-icon">💿</div>
+            <h4>Armazenamento</h4>
+            <p>SSD ou NVMe a partir de 200GB</p>
+        </div>
+        <div class="requirement-card">
+            <div class="req-icon">🌐</div>
+            <h4>Latência</h4>
+            <p>50ms ou menos</p>
+        </div>
+        <div class="requirement-card">
+            <div class="req-icon">🐧</div>
+            <h4>Sistema Operacional</h4>
+            <p>Linux Ubuntu 22.04 ou superior, sem Painel</p>
+        </div>
+    </div>
+
+    <div class="alert-box">
+        <p><strong>⚠️ Importante:</strong> Não garantimos o pleno funcionamento do CLICKNEX caso esses requisitos não sejam atendidos.</p>
+    </div>
+
+    <div class="note-box">
+        <p><strong>💡 Recomendação:</strong> Recomendamos o uso de datacenter brasileiro para garantir que trocas de telas e cliques sejam rápidos e consiga oferecer a melhor experiência para o usuário.</p>
+    </div>
+
+    <h3>Provedores Sugeridos</h3>
+    <p>Outras opções sugeridas (avaliar latência antes da contratação):</p>
+    <ul class="provider-list">
+        <li><a href="https://www.hostinger.com/zdg" target="_blank" rel="noopener noreferrer">Hostinger</a></li>
+        <li><a href="https://www.hetzner.com/" target="_blank" rel="noopener noreferrer">Hetzner</a></li>
+        <li><a href="https://www.digitalocean.com/" target="_blank" rel="noopener noreferrer">DigitalOcean</a></li>
+        <li><a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">AWS Amazon</a></li>
+        <li><a href="https://www.ovhcloud.com/pt/" target="_blank" rel="noopener noreferrer">OVH Cloud</a></li>
+    </ul>
+
+    <div class="info-box">
+        <p><strong>📋 Responsabilidade:</strong> Manutenção e Segurança do servidor são de responsabilidade do cliente.</p>
+        <p>Ver documentação completa aqui: <a href="#manutencao" class="text-link">Manutenção e Segurança</a></p>
+    </div>
+
+    <h2 id="escalabilidade">Escalabilidade e Projeção de Consumo de Recursos</h2>
+    <p>Uma dúvida comum é sobre a capacidade que os requisitos mínimos de servidor suportam em termos de clientes, canais e atendentes.</p>
+    <p>É importante entender que o software CLICKNEX não possui limitações em sua licença quanto ao número de canais ou usuários. A capacidade da sua operação de escalar depende diretamente dos recursos do seu servidor (VPS). À medida que seu uso cresce, a infraestrutura precisará ser aumentada.</p>
+
+    <h3>Projeção Média de Consumo (Memória RAM)</h3>
+    <p>Para ajudar no seu planejamento, abaixo estão as métricas médias de consumo de memória RAM observadas. Estes valores são uma projeção e podem variar dependendo da intensidade de uso.</p>
+
+    <div class="consumption-table">
+        <h4>Por Canal (Conexão):</h4>
+        <table class="specs-table">
+            <tbody>
+                <tr>
+                    <td><strong>Canais WABA / Hub</strong></td>
+                    <td>até 100 MB de RAM por canal</td>
+                </tr>
+                <tr>
+                    <td><strong>Canais Baileys / Evolution / Meow</strong></td>
+                    <td>até 250 MB de RAM por canal</td>
+                </tr>
+                <tr>
+                    <td><strong>Canais wwebjs</strong></td>
+                    <td>até 1 GB de RAM por canal</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Por Usuário (Atendente):</h4>
+        <table class="specs-table">
+            <tbody>
+                <tr>
+                    <td><strong>Cada usuário logado</strong></td>
+                    <td>em média de 100 a 150 MB de RAM</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="note-box">
+        <p><strong>💡 Recomendação:</strong> Aconselhamos que você comece com os requisitos recomendados e monitore o consumo de recursos do seu servidor à medida que sua operação cresce. Se notar lentidão ou alto consumo de RAM/CPU, é um indicativo de que é hora de realizar um upgrade no seu plano de VPS para uma configuração com mais recursos.</p>
+    </div>
+
+    <h2 id="requisitos-cliente">Requisitos Sistema operacional e navegador</h2>
+    <p>São requisitos obrigatórios para a utilização do CLICKNEX que o Usuário, cumulativamente:</p>
+    <ul>
+        <li>Utilize a Plataforma WhatsApp e a Plataforma Telegram, de acordo com os Termos e Condições de Uso próprios dessas plataformas;</li>
+        <li>Tenha idade igual ou superior a 13 (treze) anos.</li>
+    </ul>
+
+    <p>Recomendamos que o sistema operacional e o navegador do Usuário estejam atualizados para aproveitar as otimizações de desempenho e segurança do CLICKNEX, bem como que satisfaçam, pelo menos, os seguintes requisitos:</p>
+
+    <div class="requirements-grid">
+        <div class="requirement-card">
+            <div class="req-icon">💾</div>
+            <h4>Memória RAM</h4>
+            <p>8GB ou superior</p>
+        </div>
+        <div class="requirement-card">
+            <div class="req-icon">⚡</div>
+            <h4>Processador</h4>
+            <p>i5 ou superior</p>
+        </div>
+        <div class="requirement-card">
+            <div class="req-icon">🌐</div>
+            <h4>Conexão</h4>
+            <p>Internet rápida e estável</p>
+        </div>
+    </div>
+
+    <div class="alert-box">
+        <p><strong>🔒 Segurança:</strong> Além disso, é crucial manter o sistema operacional e o navegador atualizados para evitar riscos de segurança da informação e privacidade, bem como para garantir uma melhor eficácia e funcionamento do CLICKNEX.</p>
+    </div>
+
+    <h3>Versões Suportadas</h3>
+    <p>As versões suportadas da Plataforma WhatsApp são as seguintes:</p>
+    <ul>
+        <li><strong>API WhatsApp Business Account:</strong> v19.0 ou superior</li>
+        <li><strong>WhatsApp Web:</strong> até a versão v2.24xx.x</li>
+    </ul>
+
+    <div class="navigation-footer">
+        <a href="#diretrizes" class="nav-footer-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Voltar para Diretrizes e Políticas
+        </a>
+        <a href="#suporte-tecnico" class="nav-footer-link">
+            Próximo: Política de Suporte Técnico
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </a>
+    </div>
+</div>

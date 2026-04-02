@@ -27,6 +27,9 @@ const PAGE_MAP = {
     'suporte-tecnico': 'diretrizes/suporte-tecnico.html',
     'manutencao': 'diretrizes/manutencao.html',
     'api-oficial': 'diretrizes/api-oficial.html',
+    'configurar-waba': 'api/configurar-waba.html',
+    'cadastro-waba-beta': 'api/cadastro-waba-beta.html',
+    'exemplo-n8n-waba': 'api/exemplo-n8n-waba.html',
     'privacidade': 'diretrizes/privacidade.html',
     'lid-whatsapp': 'diretrizes/lid-whatsapp.html',
     'termos-condicoes': 'diretrizes/termos-condicoes.html'
@@ -210,20 +213,28 @@ function handleNavigation(e) {
 async function loadSection(sectionId) {
     const contentWrapper = document.querySelector('.content-wrapper');
     
-    // Se a seção já existe no DOM (seções estáticas), apenas mostrar
+    console.log('🔍 Carregando seção:', sectionId);
+    
+    // Se a seção já existe no DOM (seções estáticas ou já carregadas), apenas mostrar
     const existingSection = document.getElementById(sectionId);
     if (existingSection) {
+        console.log('✅ Seção já existe no DOM, apenas mostrando');
         showSection(sectionId);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         return;
     }
     
     // Se tem mapeamento para arquivo externo, carregar
     if (PAGE_MAP[sectionId]) {
         try {
-            const response = await fetch(`${CONFIG.pagesPath}${PAGE_MAP[sectionId]}`);
+            const filePath = `${CONFIG.pagesPath}${PAGE_MAP[sectionId]}`;
+            console.log('📥 Carregando arquivo:', filePath);
+            
+            const response = await fetch(filePath);
             if (!response.ok) throw new Error('Página não encontrada');
             
             const html = await response.text();
+            console.log('✅ HTML carregado, tamanho:', html.length, 'caracteres');
             
             // Criar nova seção
             const newSection = document.createElement('section');
@@ -233,19 +244,23 @@ async function loadSection(sectionId) {
             
             // Adicionar ao DOM
             contentWrapper.appendChild(newSection);
+            console.log('✅ Seção adicionada ao DOM');
             
             // Mostrar seção
             showSection(sectionId);
+            
+            // Scroll para o topo
+            window.scrollTo({ top: 0, behavior: 'smooth' });
             
             // Reinicializar event listeners para novos elementos
             initializeSectionListeners(newSection);
             
         } catch (error) {
-            console.error('Erro ao carregar seção:', error);
+            console.error('❌ Erro ao carregar seção:', error);
             showErrorMessage('Erro ao carregar conteúdo. Tente novamente.');
         }
     } else {
-        // Seção não encontrada
+        console.warn('⚠️ Seção não encontrada no PAGE_MAP:', sectionId);
         showSection(sectionId);
     }
 }
@@ -275,13 +290,23 @@ function showErrorMessage(message) {
 }
 
 function showSection(sectionId) {
-    DOM.contentSections.forEach(section => {
+    console.log('👁️ Mostrando seção:', sectionId);
+    
+    // Buscar TODAS as seções no momento (incluindo as carregadas dinamicamente)
+    const allSections = document.querySelectorAll('.content-section');
+    console.log('📋 Total de seções encontradas:', allSections.length);
+    
+    allSections.forEach(section => {
         section.classList.remove('active');
+        console.log('  ➖ Removendo active de:', section.id);
     });
     
     const targetSection = document.getElementById(sectionId);
     if (targetSection) {
         targetSection.classList.add('active');
+        console.log('  ✅ Adicionando active em:', sectionId);
+    } else {
+        console.error('  ❌ Seção não encontrada no DOM:', sectionId);
     }
 }
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste de Carregamento</title>
+</head>
+<body>
+    <h1>Teste de Carregamento Dinâmico</h1>
+    <button id="loadBtn">Carregar Página Externa</button>
+    <div id="content"></div>
+
+    <script>
+        document.getElementById('loadBtn').addEventListener('click', async () => {
+            try {
+                const response = await fetch('pages/diretrizes/pre-requisitos.html');
+                console.log('Response status:', response.status);
+                console.log('Response ok:', response.ok);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const html = await response.text();
+                console.log('HTML carregado:', html.substring(0, 100));
+                
+                document.getElementById('content').innerHTML = html;
+                alert('Conteúdo carregado com sucesso!');
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao carregar: ' + error.message);
+            }
+        });
+    </script>
+</body>
+</html>
