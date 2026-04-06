@@ -294,11 +294,16 @@ async function loadSection(sectionId) {
             const newSection = document.createElement('section');
             newSection.id = sectionId;
             newSection.className = 'content-section';
-            newSection.innerHTML = html;
+            
+            // Envolver conteúdo em container centralizado
+            const container = document.createElement('div');
+            container.className = 'container';
+            container.innerHTML = html;
+            newSection.appendChild(container);
             
             // Adicionar ao DOM
             contentWrapper.appendChild(newSection);
-            console.log('✅ Seção adicionada ao DOM');
+            console.log('✅ Seção adicionada ao DOM com container centralizado');
             
             // Mostrar seção
             showSection(sectionId);
