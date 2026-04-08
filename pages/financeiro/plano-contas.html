@@ -1,0 +1,193 @@
+<div class="module-header">
+    <div class="module-icon">
+        <i data-lucide="list-tree"></i>
+    </div>
+    <h1>Plano de Contas</h1>
+    <p class="module-description">
+        Estrutura contábil para DRE, Fluxo de Caixa e DFC
+    </p>
+</div>
+
+<div class="content-text">
+    <p>
+        O Plano de Contas é a estrutura que define como seu dinheiro é categorizado para gerar relatórios precisos 
+        como <strong>DRE</strong> (Demonstração do Resultado do Exercício) e <strong>DFC</strong> (Demonstração do Fluxo de Caixa).
+    </p>
+
+    <h2><i data-lucide="layers" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>O que é o Plano de Contas?</h2>
+    <p>
+        É uma estrutura hierárquica que organiza todas as categorias de receitas e despesas da sua empresa. 
+        Cada lançamento financeiro deve ser vinculado a uma conta específica, permitindo análises detalhadas 
+        e relatórios gerenciais precisos.
+    </p>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="git-branch"></i>
+            </div>
+            <h3>Estrutura Hierárquica</h3>
+            <p>Utilize códigos contábeis (ex: 01.01.001) para organizar contas "Pai" e "Filhas".</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="trending-up"></i>
+            </div>
+            <h3>Natureza das Contas</h3>
+            <p>Defina se a categoria é de Receita ou Despesa e sua natureza de Débito/Crédito.</p>
+            </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="sparkles"></i>
+            </div>
+            <h3>Plano Padrão</h3>
+            <p>O sistema oferece a opção de gerar uma estrutura contábil completa automaticamente.</p>
+        </div>
+    </div>
+
+    <h2><i data-lucide="settings" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Como Funciona a Estrutura</h2>
+    
+    <h3><i data-lucide="hash" style="width: 20px; height: 20px; display: inline; vertical-align: text-bottom;"></i> Códigos Contábeis</h3>
+    <p>Cada conta possui um código numérico que indica sua posição na hierarquia:</p>
+    
+    <ul>
+        <li><strong>01</strong> - Conta de primeiro nível (Pai)</li>
+        <li><strong>01.01</strong> - Subconta de segundo nível</li>
+        <li><strong>01.01.001</strong> - Conta de terceiro nível (Filha)</li>
+    </ul>
+
+    <div class="feature-section">
+        <h4>Exemplo de Estrutura:</h4>
+        <ul>
+            <li><strong>01 - Receitas</strong>
+                <ul>
+                    <li>01.01 - Receitas Operacionais
+                        <ul>
+                            <li>01.01.001 - Vendas de Produtos</li>
+                            <li>01.01.002 - Prestação de Serviços</li>
+                        </ul>
+                    </li>
+                    <li>01.02 - Receitas Não Operacionais
+                        <ul>
+                            <li>01.02.001 - Juros Recebidos</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <h3><i data-lucide="arrow-left-right" style="width: 20px; height: 20px; display: inline; vertical-align: text-bottom;"></i> Natureza das Contas</h3>
+    
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="arrow-up-circle"></i>
+            </div>
+            <h3>Receitas</h3>
+            <p>Entradas de dinheiro. Natureza: Crédito. Aumentam o patrimônio da empresa.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="arrow-down-circle"></i>
+            </div>
+            <h3>Despesas</h3>
+            <p>Saídas de dinheiro. Natureza: Débito. Reduzem o patrimônio da empresa.</p>
+        </div>
+    </div>
+
+    <h2><i data-lucide="plus-circle" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Como Criar uma Nova Conta</h2>
+    <p>Para adicionar uma nova conta ao seu plano, clique no botão verde <strong>[+ Nova Conta]</strong> e preencha:</p>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="hash"></i>
+            </div>
+            <h3>Código</h3>
+            <p>Número identificador seguindo a hierarquia (ex: 01.03.005).</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="type"></i>
+            </div>
+            <h3>Nome da Conta</h3>
+            <p>Descrição clara e objetiva (ex: "Salários e Encargos").</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="tag"></i>
+            </div>
+            <h3>Tipo</h3>
+            <p>Selecione se é Receita ou Despesa.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="git-branch"></i>
+            </div>
+            <h3>Conta Pai (Opcional)</h3>
+            <p>Vincule a uma conta superior para criar a hierarquia.</p>
+        </div>
+    </div>
+
+    <h2><i data-lucide="wand-2" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Gerar Plano Padrão Automaticamente</h2>
+    <p>
+        Se você está começando ou deseja uma estrutura completa, clique no botão <strong>[Criar Plano Padrão]</strong>. 
+        O sistema irá gerar automaticamente uma estrutura contábil baseada nas melhores práticas de mercado, incluindo:
+    </p>
+
+    <ul>
+        <li>Receitas Operacionais e Não Operacionais</li>
+        <li>Despesas Administrativas, Comerciais e Operacionais</li>
+        <li>Custos de Produtos e Serviços</li>
+        <li>Impostos e Tributos</li>
+        <li>Investimentos e Financiamentos</li>
+    </ul>
+
+    <div class="alert-box">
+        <p>
+            <strong><i data-lucide="alert-circle" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Atenção:</strong> 
+            Após gerar o plano padrão, você pode personalizar, adicionar ou remover contas conforme a necessidade 
+            específica do seu negócio.
+        </p>
+    </div>
+
+    <h2><i data-lucide="filter" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Filtros e Busca</h2>
+    <p>Na tela principal do Plano de Contas, você pode:</p>
+
+    <ul>
+        <li><strong>Filtrar por Tipo:</strong> Visualize apenas Receitas ou apenas Despesas</li>
+        <li><strong>Buscar por Nome ou Código:</strong> Localize rapidamente uma conta específica</li>
+        <li><strong>Visualizar Hierarquia:</strong> Expanda e recolha as contas para navegar pela estrutura</li>
+    </ul>
+
+    <div class="tips-box">
+        <h4><i data-lucide="lightbulb" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Dicas Importantes</h4>
+        <ul>
+            <li><strong>Categorize sempre:</strong> Para uma gestão eficiente, sempre categorize seus lançamentos seguindo o Plano de Contas. Isso permitirá que os gráficos do Dashboard reflitam a realidade exata da sua empresa.</li>
+            <li><strong>Mantenha a consistência:</strong> Use sempre as mesmas contas para lançamentos similares</li>
+            <li><strong>Revise periodicamente:</strong> Ajuste o plano conforme sua empresa evolui</li>
+            <li><strong>Não delete contas com histórico:</strong> Se uma conta não é mais usada, desative-a ao invés de excluir</li>
+        </ul>
+    </div>
+
+    <div class="feature-section">
+        <h3><i data-lucide="bar-chart-3" style="width: 20px; height: 20px; display: inline; vertical-align: text-bottom;"></i> Impacto nos Relatórios</h3>
+        <p>
+            Um Plano de Contas bem estruturado é essencial para gerar relatórios gerenciais precisos. 
+            Ele alimenta diretamente:
+        </p>
+        <ul>
+            <li><strong>DRE:</strong> Demonstração do Resultado do Exercício</li>
+            <li><strong>DFC:</strong> Demonstração do Fluxo de Caixa</li>
+            <li><strong>Dashboard Financeiro:</strong> Gráficos e indicadores em tempo real</li>
+            <li><strong>Análises por Categoria:</strong> Identificação de maiores custos e receitas</li>
+        </ul>
+    </div>
+</div>

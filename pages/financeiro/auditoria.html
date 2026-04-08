@@ -1,0 +1,375 @@
+<div class="module-header">
+    <div class="module-icon">
+        <i data-lucide="shield-check"></i>
+    </div>
+    <h1>Segurança - Auditoria Financeira</h1>
+    <p class="module-description">
+        Controle e transparência total com registro de todas as operações
+    </p>
+</div>
+
+<div class="content-text">
+    <p>
+        O módulo de <strong>Auditoria Financeira</strong> é a ferramenta de controle e transparência total do 
+        seu negócio. Ele registra, de forma automática e imutável, todas as operações realizadas no módulo 
+        financeiro, servindo como uma trilha de segurança para identificar alterações, erros ou acessos indevidos.
+    </p>
+
+    <h2><i data-lucide="list" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Visão Geral do Log de Atividades</h2>
+    <p>A tela de auditoria apresenta um histórico cronológico detalhado. Cada linha representa uma interação de um usuário com o sistema, contendo:</p>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="clock"></i>
+            </div>
+            <h3>Data/Hora</h3>
+            <p>O momento exato em que a operação foi realizada.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="user"></i>
+            </div>
+            <h3>Operador</h3>
+            <p>O nome do usuário que efetuou a ação.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="activity"></i>
+            </div>
+            <h3>Ação</h3>
+            <p>O tipo de modificação realizada (ex: Criação, Pagamento, Atualização).</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="database"></i>
+            </div>
+            <h3>Entidade</h3>
+            <p>A qual módulo a ação pertence (ex: Conta a Pagar, Categoria, Cliente).</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="hash"></i>
+            </div>
+            <h3>ID</h3>
+            <p>O identificador único do registro afetado no banco de dados.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="globe"></i>
+            </div>
+            <h3>IP</h3>
+            <p>O endereço de rede de onde partiu a solicitação, crucial para auditorias de segurança cibernética.</p>
+        </div>
+    </div>
+
+    <h2><i data-lucide="filter" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Filtros de Busca</h2>
+    <p>Para facilitar a investigação de eventos específicos, você pode utilizar os filtros superiores:</p>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="database"></i>
+            </div>
+            <h3>Entidade</h3>
+            <p>Filtre para ver apenas ações relacionadas a um módulo específico, como "Conta a Pagar" ou "Clientes".</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="zap"></i>
+            </div>
+            <h3>Ação</h3>
+            <p>Busque por tipos específicos de eventos, como apenas exclusões (DELETE) ou novos registros (CREATE).</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="calendar-range"></i>
+            </div>
+            <h3>Período</h3>
+            <p>Defina um intervalo de datas para análise temporal.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="user-search"></i>
+            </div>
+            <h3>Operador</h3>
+            <p>Filtre por usuário específico para rastrear suas ações.</p>
+        </div>
+    </div>
+
+    <h2><i data-lucide="tag" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Entendendo as Tags de Ação</h2>
+    <p>O CLICKNEX utiliza etiquetas coloridas para que você identifique o tipo de operação à primeira vista:</p>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="plus-circle" style="color: #22C55E;"></i>
+            </div>
+            <h3>[+ CREATE] (Verde)</h3>
+            <p>Um novo registro foi inserido no sistema (ex: uma nova conta foi lançada).</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="dollar-sign" style="color: #16A34A;"></i>
+            </div>
+            <h3>[$ PAY] (Verde Escuro)</h3>
+            <p>Foi dada a baixa de pagamento em uma conta.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="edit" style="color: #3B82F6;"></i>
+            </div>
+            <h3>[UPDATE] (Azul)</h3>
+            <p>Um registro existente foi editado ou modificado.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="trash-2" style="color: #EF4444;"></i>
+            </div>
+            <h3>[DELETE] (Vermelho)</h3>
+            <p>Um registro foi removido do sistema.</p>
+        </div>
+    </div>
+
+    <h3>Tipos de Ações Registradas</h3>
+    <ul>
+        <li><strong>CREATE:</strong> Criação de novos registros (contas, clientes, fornecedores)</li>
+        <li><strong>UPDATE:</strong> Edição de dados existentes</li>
+        <li><strong>DELETE:</strong> Exclusão de registros</li>
+        <li><strong>PAY:</strong> Baixa de pagamento em contas a pagar</li>
+        <li><strong>RECEIVE:</strong> Baixa de recebimento em contas a receber</li>
+        <li><strong>IMPORT:</strong> Importação de extratos bancários</li>
+        <li><strong>EXPORT:</strong> Exportação de relatórios</li>
+        <li><strong>LOGIN:</strong> Acesso ao sistema</li>
+        <li><strong>LOGOUT:</strong> Saída do sistema</li>
+    </ul>
+
+    <h2><i data-lucide="search" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Como Usar a Auditoria</h2>
+    <p>Cenários práticos de uso da auditoria:</p>
+
+    <div class="feature-section">
+        <h3><i data-lucide="alert-triangle" style="width: 20px; height: 20px; display: inline; vertical-align: text-bottom;"></i> Investigação de Divergências</h3>
+        <p><strong>Situação:</strong> O saldo bancário não está batendo com o sistema.</p>
+        <p><strong>Solução:</strong></p>
+        <ol>
+            <li>Acesse a Auditoria Financeira</li>
+            <li>Filtre por "Carteiras" ou "Contas a Pagar/Receber"</li>
+            <li>Analise as últimas modificações</li>
+            <li>Identifique qual operador fez alterações</li>
+            <li>Verifique se houve exclusões ou edições indevidas</li>
+        </ol>
+    </div>
+
+    <div class="feature-section">
+        <h3><i data-lucide="user-x" style="width: 20px; height: 20px; display: inline; vertical-align: text-bottom;"></i> Rastreamento de Ações de Usuário</h3>
+        <p><strong>Situação:</strong> Suspeita de acesso não autorizado ou ações indevidas.</p>
+        <p><strong>Solução:</strong></p>
+        <ol>
+            <li>Filtre por operador específico</li>
+            <li>Analise todas as ações realizadas</li>
+            <li>Verifique horários e IPs de acesso</li>
+            <li>Identifique padrões suspeitos</li>
+            <li>Tome medidas corretivas se necessário</li>
+        </ol>
+    </div>
+
+    <div class="feature-section">
+        <h3><i data-lucide="file-search" style="width: 20px; height: 20px; display: inline; vertical-align: text-bottom;"></i> Recuperação de Informações</h3>
+        <p><strong>Situação:</strong> Um registro importante foi excluído acidentalmente.</p>
+        <p><strong>Solução:</strong></p>
+        <ol>
+            <li>Filtre por ação "DELETE"</li>
+            <li>Localize o registro excluído pelo ID</li>
+            <li>Identifique quem e quando excluiu</li>
+            <li>Recupere as informações do log</li>
+            <li>Recrie o registro se necessário</li>
+        </ol>
+    </div>
+
+    <h2><i data-lucide="shield" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Por que a Auditoria é Importante?</h2>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="eye"></i>
+            </div>
+            <h3>Rastreabilidade</h3>
+            <p>Se um saldo bancário não estiver batendo ou se uma conta a pagar desapareceu, a Auditoria é o primeiro lugar que você deve consultar para entender qual operador realizou a ação e em qual data.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="shield-alert"></i>
+            </div>
+            <h3>Prevenção de Fraudes</h3>
+            <p>Saber que o sistema registra o IP e o nome do operador em cada clique desencoraja ações mal-intencionadas e garante que todos sigam os processos financeiros estabelecidos pela empresa.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="check-circle"></i>
+            </div>
+            <h3>Conformidade</h3>
+            <p>Atende requisitos de compliance e auditoria externa, mantendo registro completo de todas as operações.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="history"></i>
+            </div>
+            <h3>Histórico Completo</h3>
+            <p>Mantém registro permanente de todas as ações, permitindo análises históricas e investigações futuras.</p>
+        </div>
+    </div>
+
+    <div class="alert-box">
+        <p>
+            <strong><i data-lucide="alert-triangle" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Importante:</strong> 
+            Se um saldo bancário não estiver batendo ou se uma conta a pagar desapareceu, a Auditoria é o 
+            primeiro lugar que você deve consultar para entender qual operador realizou a ação e em qual data.
+        </p>
+    </div>
+
+    <h2><i data-lucide="lock" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Segurança e Imutabilidade</h2>
+    <p>O sistema de auditoria possui características especiais de segurança:</p>
+
+    <ul>
+        <li><strong>Registro Automático:</strong> Todas as ações são registradas automaticamente, sem intervenção manual</li>
+        <li><strong>Imutável:</strong> Os logs não podem ser editados ou excluídos, garantindo integridade</li>
+        <li><strong>Timestamp Preciso:</strong> Cada ação possui data e hora exatas com precisão de segundos</li>
+        <li><strong>Rastreamento de IP:</strong> Identifica a origem de cada ação para segurança adicional</li>
+        <li><strong>Identificação de Usuário:</strong> Vincula cada ação ao operador responsável</li>
+    </ul>
+
+    <h2><i data-lucide="file-text" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Informações Detalhadas do Log</h2>
+    <p>Cada entrada no log de auditoria contém:</p>
+
+    <div class="feature-section">
+        <h3>Dados Básicos</h3>
+        <ul>
+            <li><strong>ID do Log:</strong> Identificador único da entrada de auditoria</li>
+            <li><strong>Timestamp:</strong> Data e hora exatas da ação</li>
+            <li><strong>Usuário:</strong> Nome completo do operador</li>
+            <li><strong>Email do Usuário:</strong> Email do operador para contato</li>
+        </ul>
+    </div>
+
+    <div class="feature-section">
+        <h3>Dados da Ação</h3>
+        <ul>
+            <li><strong>Tipo de Ação:</strong> CREATE, UPDATE, DELETE, PAY, etc.</li>
+            <li><strong>Entidade Afetada:</strong> Qual módulo foi modificado</li>
+            <li><strong>ID do Registro:</strong> Identificador do item modificado</li>
+            <li><strong>Descrição:</strong> Detalhes sobre a modificação</li>
+        </ul>
+    </div>
+
+    <div class="feature-section">
+        <h3>Dados Técnicos</h3>
+        <ul>
+            <li><strong>Endereço IP:</strong> Origem da requisição</li>
+            <li><strong>User Agent:</strong> Navegador e sistema operacional usado</li>
+            <li><strong>Sessão:</strong> ID da sessão do usuário</li>
+        </ul>
+    </div>
+
+    <h2><i data-lucide="download" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Exportação de Logs</h2>
+    <p>Você pode exportar os logs de auditoria para:</p>
+
+    <ul>
+        <li><strong>CSV:</strong> Para análise em planilhas</li>
+        <li><strong>PDF:</strong> Para documentação e arquivamento</li>
+        <li><strong>JSON:</strong> Para integração com outros sistemas</li>
+    </ul>
+
+    <div class="tips-box">
+        <h4><i data-lucide="lightbulb" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Dicas de Uso</h4>
+        <ul>
+            <li><strong>Revise Regularmente:</strong> Faça análises periódicas dos logs para identificar padrões</li>
+            <li><strong>Configure Alertas:</strong> Defina notificações para ações críticas</li>
+            <li><strong>Documente Investigações:</strong> Mantenha registro de análises realizadas</li>
+            <li><strong>Treine a Equipe:</strong> Certifique-se de que todos sabem que suas ações são registradas</li>
+            <li><strong>Backup dos Logs:</strong> Exporte periodicamente para backup externo</li>
+        </ul>
+    </div>
+
+    <h2><i data-lucide="users" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Controle de Acesso</h2>
+    <p>O acesso à auditoria deve ser restrito:</p>
+
+    <div class="alert-box">
+        <p>
+            <strong><i data-lucide="shield-check" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Recomendação:</strong> 
+            Apenas gestores, administradores e responsáveis pela área financeira devem ter acesso aos logs 
+            de auditoria. Isso garante a confidencialidade das informações e evita manipulação de dados.
+        </p>
+    </div>
+
+    <h2><i data-lucide="book-open" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Casos de Uso Práticos</h2>
+
+    <div class="feature-section">
+        <h3>Auditoria Interna</h3>
+        <ul>
+            <li>Verificação de conformidade com políticas internas</li>
+            <li>Análise de processos financeiros</li>
+            <li>Identificação de gargalos operacionais</li>
+            <li>Validação de controles internos</li>
+        </ul>
+    </div>
+
+    <div class="feature-section">
+        <h3>Auditoria Externa</h3>
+        <ul>
+            <li>Fornecimento de evidências para auditores</li>
+            <li>Demonstração de controles adequados</li>
+            <li>Comprovação de rastreabilidade</li>
+            <li>Atendimento a requisitos regulatórios</li>
+        </ul>
+    </div>
+
+    <div class="feature-section">
+        <h3>Investigação de Incidentes</h3>
+        <ul>
+            <li>Análise de erros operacionais</li>
+            <li>Investigação de fraudes</li>
+            <li>Identificação de acessos não autorizados</li>
+            <li>Recuperação de informações perdidas</li>
+        </ul>
+    </div>
+
+    <h2><i data-lucide="trending-up" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Análise de Padrões</h2>
+    <p>Use a auditoria para identificar padrões de uso:</p>
+
+    <ul>
+        <li><strong>Horários de Pico:</strong> Quando há mais movimentações</li>
+        <li><strong>Usuários Mais Ativos:</strong> Quem realiza mais operações</li>
+        <li><strong>Tipos de Ações Comuns:</strong> Quais operações são mais frequentes</li>
+        <li><strong>Erros Recorrentes:</strong> Identificar problemas sistemáticos</li>
+    </ul>
+
+    <div class="tips-box">
+        <h4><i data-lucide="shield-alert" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Prevenção de Fraudes</h4>
+        <p>
+            Saber que o sistema registra o IP e o nome do operador em cada clique desencoraja ações 
+            mal-intencionadas e garante que todos sigam os processos financeiros estabelecidos pela empresa.
+        </p>
+    </div>
+
+    <div class="alert-box">
+        <p>
+            <strong><i data-lucide="star" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Dica Profissional:</strong> 
+            Empresas que mantêm logs de auditoria detalhados têm 70% mais chances de detectar e prevenir 
+            fraudes financeiras. A auditoria é sua primeira linha de defesa contra irregularidades.
+        </p>
+    </div>
+</div>

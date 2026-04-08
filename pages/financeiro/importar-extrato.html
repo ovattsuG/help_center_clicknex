@@ -1,0 +1,264 @@
+<div class="module-header">
+    <div class="module-icon">
+        <i data-lucide="upload"></i>
+    </div>
+    <h1>Movimentações - Importar Extrato Bancário</h1>
+    <p class="module-description">
+        Importe extratos bancários e mantenha seu financeiro atualizado automaticamente
+    </p>
+</div>
+
+<div class="content-text">
+    <p>
+        A importação de extrato é a maneira mais rápida de manter seu financeiro em dia, evitando erros de 
+        digitação e economizando tempo operacional. Com esta ferramenta, você traz os dados do seu banco 
+        diretamente para dentro do CLICKNEX.
+    </p>
+
+    <h2><i data-lucide="upload-cloud" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Como Realizar a Importação</h2>
+    <p>O processo é simples e intuitivo:</p>
+
+    <ol>
+        <li>Acesse <strong>Movimentações</strong> > <strong>Importar Extrato</strong></li>
+        <li><strong>Selecionar Arquivo:</strong> Você pode arrastar o arquivo do seu computador e soltá-lo na área pontilhada ou clicar no botão <strong>[Escolher arquivo]</strong> para navegar em suas pastas</li>
+        <li>Após o upload, o sistema fará a leitura dos dados para que você possa conferir e confirmar os lançamentos</li>
+    </ol>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="mouse-pointer-click"></i>
+            </div>
+            <h3>Arrastar e Soltar</h3>
+            <p>Arraste o arquivo do extrato diretamente para a área de upload.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="folder-open"></i>
+            </div>
+            <h3>Escolher Arquivo</h3>
+            <p>Clique no botão para navegar pelas pastas do seu computador.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="check-circle"></i>
+            </div>
+            <h3>Conferir e Confirmar</h3>
+            <p>Revise os dados importados antes de confirmar os lançamentos.</p>
+        </div>
+    </div>
+
+    <h2><i data-lucide="file-type" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Formatos e Bancos Suportados</h2>
+    <p>O CLICKNEX é compatível com os principais formatos utilizados pelas instituições financeiras brasileiras. Confira as especificações para cada um:</p>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="file-code"></i>
+            </div>
+            <h3>OFX</h3>
+            <p><strong>Bancos:</strong> Nubank, Itaú, Bradesco</p>
+            <p>É o formato padrão bancário e o mais recomendado para evitar erros.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="file-spreadsheet"></i>
+            </div>
+            <h3>CSV</h3>
+            <p><strong>Bancos:</strong> Banco do Brasil, Sicoob</p>
+            <p>Certifique-se de que o separador do arquivo seja ponto e vírgula (;).</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="file-text"></i>
+            </div>
+            <h3>PDF</h3>
+            <p><strong>Bancos:</strong> Sicoob, Banco do Brasil</p>
+            <p>Utilize o arquivo original exportado diretamente pelo Internet Banking.</p>
+        </div>
+    </div>
+
+    <h3>Tabela de Compatibilidade</h3>
+    <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+        <thead>
+            <tr style="background-color: var(--color-bg-secondary);">
+                <th style="padding: 12px; text-align: left; border: 1px solid var(--color-border);">Formato</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid var(--color-border);">Bancos (Exemplos)</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid var(--color-border);">Observações Técnicas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 12px; border: 1px solid var(--color-border);"><strong>OFX</strong></td>
+                <td style="padding: 12px; border: 1px solid var(--color-border);">Nubank, Itaú, Bradesco</td>
+                <td style="padding: 12px; border: 1px solid var(--color-border);">É o formato padrão bancário e o mais recomendado para evitar erros.</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid var(--color-border);"><strong>CSV</strong></td>
+                <td style="padding: 12px; border: 1px solid var(--color-border);">Banco do Brasil, Sicoob</td>
+                <td style="padding: 12px; border: 1px solid var(--color-border);">Certifique-se de que o separador do arquivo seja <strong>ponto e vírgula (;)</strong>.</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid var(--color-border);"><strong>PDF</strong></td>
+                <td style="padding: 12px; border: 1px solid var(--color-border);">Sicoob, Banco do Brasil</td>
+                <td style="padding: 12px; border: 1px solid var(--color-border);">Utilize o arquivo original exportado diretamente pelo Internet Banking.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2><i data-lucide="download" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Como Obter o Extrato do Seu Banco</h2>
+    <p>Cada banco possui seu próprio processo de exportação. Geralmente você deve:</p>
+
+    <ol>
+        <li>Acessar o Internet Banking ou aplicativo do banco</li>
+        <li>Ir para a seção de "Extratos" ou "Movimentações"</li>
+        <li>Selecionar o período desejado</li>
+        <li>Escolher a opção "Exportar" ou "Download"</li>
+        <li>Selecionar o formato (OFX, CSV ou PDF)</li>
+        <li>Salvar o arquivo no seu computador</li>
+    </ol>
+
+    <div class="feature-section">
+        <h3><i data-lucide="building-2" style="width: 20px; height: 20px; display: inline; vertical-align: text-bottom;"></i> Exemplos por Banco</h3>
+        <ul>
+            <li><strong>Nubank:</strong> App > Extrato > Ícone de compartilhar > Exportar OFX</li>
+            <li><strong>Itaú:</strong> Internet Banking > Conta Corrente > Extrato > Exportar > OFX</li>
+            <li><strong>Banco do Brasil:</strong> Internet Banking > Extrato > Exportar > CSV</li>
+            <li><strong>Bradesco:</strong> Internet Banking > Extrato > Download > OFX</li>
+        </ul>
+    </div>
+
+    <h2><i data-lucide="git-merge" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Conciliação Automática</h2>
+    <p>Após importar o extrato, o sistema realiza uma conciliação inteligente:</p>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="search"></i>
+            </div>
+            <h3>Identificação Automática</h3>
+            <p>O sistema tenta identificar se aquele lançamento já existe no seu "Contas a Pagar" ou "Receber" com base no valor e na data.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="link"></i>
+            </div>
+            <h3>Vinculação</h3>
+            <p>Transações reconhecidas são automaticamente vinculadas aos lançamentos existentes.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="plus-circle"></i>
+            </div>
+            <h3>Novos Lançamentos</h3>
+            <p>Transações não reconhecidas podem ser criadas como novos lançamentos.</p>
+        </div>
+    </div>
+
+    <h3>Processo de Conciliação</h3>
+    <ol>
+        <li>Sistema compara valores e datas das transações importadas</li>
+        <li>Identifica correspondências com contas a pagar/receber pendentes</li>
+        <li>Sugere vinculações automáticas para sua aprovação</li>
+        <li>Permite criar novos lançamentos para transações não identificadas</li>
+    </ol>
+
+    <h2><i data-lucide="check-square" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Revisão e Confirmação</h2>
+    <p>Antes de finalizar a importação, você pode:</p>
+
+    <ul>
+        <li><strong>Revisar Transações:</strong> Confira cada lançamento importado</li>
+        <li><strong>Editar Descrições:</strong> Ajuste as descrições para melhor identificação</li>
+        <li><strong>Categorizar:</strong> Vincule ao Plano de Contas correto</li>
+        <li><strong>Excluir Duplicatas:</strong> Remova transações já lançadas manualmente</li>
+        <li><strong>Confirmar Selecionados:</strong> Escolha quais transações deseja importar</li>
+    </ul>
+
+    <div class="tips-box">
+        <h4><i data-lucide="lightbulb" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Boas Práticas para uma Importação Perfeita</h4>
+        <ul>
+            <li><strong>Não edite o arquivo:</strong> Para garantir que o CLICKNEX consiga ler os dados corretamente, não abra e salve o arquivo (especialmente CSV) no Excel antes de fazer o upload. Isso pode alterar a formatação dos campos.</li>
+            <li><strong>Importe Regularmente:</strong> Faça importações semanais para manter o controle</li>
+            <li><strong>Verifique o Período:</strong> Certifique-se de não importar períodos duplicados</li>
+            <li><strong>Confira os Saldos:</strong> Compare o saldo final com o saldo da carteira</li>
+            <li><strong>Use o Formato OFX:</strong> Sempre que possível, prefira o formato OFX</li>
+        </ul>
+    </div>
+
+    <div class="alert-box">
+        <p>
+            <strong><i data-lucide="alert-triangle" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Importante:</strong> 
+            Para garantir que o CLICKNEX consiga ler os dados corretamente, não abra e salve o arquivo 
+            (especialmente CSV) no Excel antes de fazer o upload. Isso pode alterar a formatação dos campos.
+        </p>
+    </div>
+
+    <h2><i data-lucide="shield-alert" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Problemas Comuns e Soluções</h2>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="x-circle"></i>
+            </div>
+            <h3>Arquivo Não Reconhecido</h3>
+            <p><strong>Solução:</strong> Verifique se o formato está correto e se o arquivo não foi editado manualmente.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="copy"></i>
+            </div>
+            <h3>Transações Duplicadas</h3>
+            <p><strong>Solução:</strong> O sistema alerta sobre duplicatas. Desmarque as transações já lançadas antes de confirmar.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="alert-circle"></i>
+            </div>
+            <h3>Datas Incorretas</h3>
+            <p><strong>Solução:</strong> Verifique se o período exportado do banco está correto.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="file-x"></i>
+            </div>
+            <h3>Erro ao Ler CSV</h3>
+            <p><strong>Solução:</strong> Certifique-se de que o separador é ponto e vírgula (;) e que o arquivo não foi aberto no Excel.</p>
+        </div>
+    </div>
+
+    <h2><i data-lucide="zap" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Vantagens da Importação</h2>
+    <p>Utilizar a importação de extratos traz diversos benefícios:</p>
+
+    <ul>
+        <li><strong>Economia de Tempo:</strong> Evita digitação manual de centenas de transações</li>
+        <li><strong>Redução de Erros:</strong> Elimina erros de digitação e transcrição</li>
+        <li><strong>Conciliação Rápida:</strong> Facilita a conferência com o banco</li>
+        <li><strong>Atualização em Massa:</strong> Baixa múltiplas contas de uma só vez</li>
+        <li><strong>Histórico Completo:</strong> Mantém registro detalhado de todas as movimentações</li>
+    </ul>
+
+    <div class="feature-section">
+        <h3><i data-lucide="clock" style="width: 20px; height: 20px; display: inline; vertical-align: text-bottom;"></i> Ganho de Produtividade</h3>
+        <p>
+            Uma importação que levaria horas para ser feita manualmente pode ser concluída em poucos minutos, 
+            permitindo que você foque em análises estratégicas ao invés de tarefas operacionais.
+        </p>
+    </div>
+
+    <div class="alert-box">
+        <p>
+            <strong><i data-lucide="info" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Dica:</strong> 
+            Após importar, o sistema tentará identificar se aquele lançamento já existe no seu "Contas a Pagar" 
+            ou "Receber" com base no valor e na data, facilitando a sua conciliação bancária.
+        </p>
+    </div>
+</div>

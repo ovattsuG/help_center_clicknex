@@ -18,6 +18,7 @@ const PAGE_MAP = {
     
     // Dashboard
     'dashboard': 'dashboard/dashboard.html',
+    'dashboard-financeiro': 'dashboard/financeiro.html',
     
     // Agenda
     'agenda-agendamentos': 'agenda/agendamentos.html',
@@ -73,7 +74,24 @@ const PAGE_MAP = {
     
     // API
     'configurar-waba': 'api/configurar-waba.html',
-    'cadastro-waba-beta': 'api/cadastro-waba-beta.html'
+    'cadastro-waba-beta': 'api/cadastro-waba-beta.html',
+    
+    // Financeiro
+    'financeiro-clientes': 'financeiro/clientes.html',
+    'financeiro-fornecedores': 'financeiro/fornecedores.html',
+    'financeiro-plano-contas': 'financeiro/plano-contas.html',
+    'financeiro-carteiras': 'financeiro/carteiras.html',
+    'financeiro-contas-receber': 'financeiro/contas-receber.html',
+    'financeiro-contas-pagar': 'financeiro/contas-pagar.html',
+    'financeiro-compras': 'financeiro/compras.html',
+    'financeiro-extrato': 'financeiro/extrato.html',
+    'financeiro-importar-extrato': 'financeiro/importar-extrato.html',
+    'financeiro-leitor-contas': 'financeiro/leitor-contas.html',
+    'financeiro-fluxo-caixa': 'financeiro/fluxo-caixa.html',
+    'financeiro-relatorios': 'financeiro/relatorios.html',
+    'financeiro-planejador': 'financeiro/planejador.html',
+    'financeiro-auditoria': 'financeiro/auditoria.html',
+    'financeiro-agente-financeiro': 'financeiro/agente-financeiro.html'
 };
 
 // ========================================

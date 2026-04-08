@@ -1,0 +1,169 @@
+<div class="module-header">
+    <div class="module-icon">
+        <i data-lucide="users"></i>
+    </div>
+    <h1>Cadastros - Clientes Financeiros</h1>
+    <p class="module-description">
+        Gerencie todos os clientes vinculados às suas operações financeiras
+    </p>
+</div>
+
+<div class="content-text">
+    <p>
+        Neste módulo, você gerencia todos os clientes vinculados às suas operações financeiras no CLICKNEX. 
+        Centralizar essas informações é crucial para a emissão correta de faturas, acompanhamento de inadimplência 
+        e histórico de transações.
+    </p>
+
+    <h2><i data-lucide="list" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Visão Geral da Lista de Clientes</h2>
+    <p>A tela principal exibe uma tabela detalhada com todos os seus clientes cadastrados. Você pode gerenciar sua visualização e encontrar informações rapidamente:</p>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="search"></i>
+            </div>
+            <h3>Barra de Pesquisa</h3>
+            <p>Utilize para buscar rapidamente por nome, documento ou email do cliente.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="filter"></i>
+            </div>
+            <h3>Filtros Avançados</h3>
+            <p>Refine sua busca usando os dropdowns de Tipo (Pessoa Física/Jurídica) e Status (ex: Ativo).</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="table"></i>
+            </div>
+            <h3>Tabela de Dados</h3>
+            <p>Visualize todas as informações essenciais dos clientes em colunas organizadas.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="more-horizontal"></i>
+            </div>
+            <h3>Ações</h3>
+            <p>Menu com opções adicionais para gerenciar o registro do cliente.</p>
+        </div>
+    </div>
+
+    <h3>Colunas da Tabela</h3>
+    <ul>
+        <li><strong>Nome:</strong> Nome completo ou razão social</li>
+        <li><strong>Tipo:</strong> Classificação como Pessoa Física ou Pessoa Jurídica</li>
+        <li><strong>Documento:</strong> CPF ou CNPJ (exibido como '-' se não preenchido)</li>
+        <li><strong>Email:</strong> O endereço de contato principal</li>
+        <li><strong>Telefone:</strong> O número de telefone de contato principal</li>
+        <li><strong>Status:</strong> O status atual do cliente (ex: Ativo)</li>
+        <li><strong>... (Ações):</strong> Menu com opções adicionais para gerenciar o registro</li>
+    </ul>
+
+    <div class="tips-box">
+        <h4><i data-lucide="layers" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Paginação</h4>
+        <p>Controle quantos registros são exibidos por página e navegue entre elas.</p>
+    </div>
+
+    <h2><i data-lucide="user-plus" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Como Adicionar Novos Clientes</h2>
+    <p>Existem duas formas principais de adicionar novos clientes ao seu módulo financeiro:</p>
+
+    <div class="feature-section">
+        <h3><i data-lucide="download" style="width: 20px; height: 20px; display: inline; vertical-align: text-bottom;"></i> 1. Importar do CRM</h3>
+        <p>
+            Clique no botão <strong>[Importar do CRM]</strong> (azul, no topo direito) para sincronizar clientes 
+            já cadastrados no seu módulo de CRM principal. Isso evita duplicidade de dados e agiliza o processo.
+        </p>
+    </div>
+
+    <div class="feature-section">
+        <h3><i data-lucide="plus-circle" style="width: 20px; height: 20px; display: inline; vertical-align: text-bottom;"></i> 2. Cadastrar Novo Cliente Manualmente</h3>
+        <p>
+            Clique no botão <strong>[+ Novo Cliente]</strong> (verde, no topo direito) para abrir o formulário de cadastro.
+        </p>
+    </div>
+
+    <h3>Campos do Formulário</h3>
+    <p>Preencha os seguintes campos no modal que se abre:</p>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="user-check"></i>
+            </div>
+            <h3>Tipo (Obrigatório)</h3>
+            <p>Selecione se o cliente é uma Pessoa Física ou Pessoa Jurídica. O formulário se ajustará dinamicamente.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="file-text"></i>
+            </div>
+            <h3>CNPJ / CPF (Obrigatório)</h3>
+            <p>Insira o número do documento com a máscara correta.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="user"></i>
+            </div>
+            <h3>Nome (Obrigatório)</h3>
+            <p>Insira o nome completo ou a razão social.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="mail"></i>
+            </div>
+            <h3>Email</h3>
+            <p>O email principal para faturamento e contato.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="phone"></i>
+            </div>
+            <h3>Telefone</h3>
+            <p>O número de telefone principal de contato.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="map-pin"></i>
+            </div>
+            <h3>Endereço</h3>
+            <p>Inclua rua, número, complemento, cidade, estado (UF) e CEP.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="message-square"></i>
+            </div>
+            <h3>Observações</h3>
+            <p>Espaço opcional para adicionar informações relevantes sobre o cliente.</p>
+        </div>
+    </div>
+
+    <p>Após preencher os dados, clique em <strong>[Criar]</strong> para salvar o novo cliente.</p>
+
+    <div class="alert-box">
+        <p>
+            <strong><i data-lucide="alert-circle" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Importante:</strong> 
+            Lembre-se de verificar a precisão dos dados inseridos, especialmente documento e endereço de faturamento, 
+            para garantir a conformidade legal na emissão de documentos financeiros.
+        </p>
+    </div>
+
+    <div class="tips-box">
+        <h4><i data-lucide="lightbulb" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Dicas</h4>
+        <ul>
+            <li>Use a importação do CRM para evitar duplicidade de dados</li>
+            <li>Mantenha os dados de contato sempre atualizados</li>
+            <li>Preencha o endereço completo para facilitar a emissão de notas fiscais</li>
+            <li>Use o campo de observações para informações importantes sobre o cliente</li>
+        </ul>
+    </div>
+</div>

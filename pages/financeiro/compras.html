@@ -1,0 +1,300 @@
+<div class="module-header">
+    <div class="module-icon">
+        <i data-lucide="shopping-cart"></i>
+    </div>
+    <h1>Movimentações - Lançamento de Compras</h1>
+    <p class="module-description">
+        Registre a entrada de produtos e insumos com detalhamento completo
+    </p>
+</div>
+
+<div class="content-text">
+    <p>
+        O módulo de <strong>Lançamento de Compras</strong> permite que você registre a entrada de produtos e 
+        insumos de forma detalhada, integrando o custo operacional diretamente com o seu financeiro. Diferente 
+        de uma despesa simples, aqui você consegue especificar quantidades e itens unitários.
+    </p>
+
+    <h2><i data-lucide="layout-grid" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Visão Geral da Tela</h2>
+    <p>Na tela principal de compras, você pode gerenciar todo o seu histórico de aquisições:</p>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="search"></i>
+            </div>
+            <h3>Busca Inteligente</h3>
+            <p>Localize uma compra específica digitando o nome do produto ou o número do pedido.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="filter"></i>
+            </div>
+            <h3>Filtro de Status</h3>
+            <p>Organize sua visualização para focar em compras concluídas, pendentes ou canceladas.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="plus-circle"></i>
+            </div>
+            <h3>Botão Nova Compra</h3>
+            <p>Atalho para iniciar o registro de uma nova aquisição.</p>
+        </div>
+    </div>
+
+    <h2><i data-lucide="package-plus" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Como Registrar uma Nova Compra</h2>
+    <p>Para lançar uma entrada, clique no botão verde <strong>[+ Nova Compra]</strong>. No formulário, preencha os detalhes conforme abaixo:</p>
+
+    <h3><i data-lucide="info" style="width: 20px; height: 20px; display: inline; vertical-align: text-bottom;"></i> Identificação e Origem</h3>
+    
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="calendar"></i>
+            </div>
+            <h3>Data da Compra (Obrigatório)</h3>
+            <p>O dia em que a transação foi realizada.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="hash"></i>
+            </div>
+            <h3>Nº Pedido</h3>
+            <p>O código de controle do fornecedor ou seu número interno de pedido.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="building-2"></i>
+            </div>
+            <h3>Fornecedor</h3>
+            <p>Selecione o parceiro de quem você está adquirindo os itens.</p>
+        </div>
+    </div>
+
+    <h3><i data-lucide="package" style="width: 20px; height: 20px; display: inline; vertical-align: text-bottom;"></i> Detalhes do Produto</h3>
+    
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="box"></i>
+            </div>
+            <h3>Produto (Obrigatório)</h3>
+            <p>Nome do item comprado.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="barcode"></i>
+            </div>
+            <h3>Cód. Interno</h3>
+            <p>Seu código de referência para este produto.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="tag"></i>
+            </div>
+            <h3>Classificações (1 e 2)</h3>
+            <p>Utilize para categorizar o tipo de item (ex: Matéria Prima, Insumos, Revenda).</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="ruler"></i>
+            </div>
+            <h3>Unidade / Quantidade</h3>
+            <p>Defina a unidade de medida (un, kg, lt) e a quantidade adquirida.</p>
+        </div>
+    </div>
+
+    <h3><i data-lucide="dollar-sign" style="width: 20px; height: 20px; display: inline; vertical-align: text-bottom;"></i> Custos e Financeiro</h3>
+    
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="coins"></i>
+            </div>
+            <h3>Custo Unitário (Obrigatório)</h3>
+            <p>O valor individual de cada item.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="truck"></i>
+            </div>
+            <h3>Frete Unitário</h3>
+            <p>Se houver custo de transporte por item, insira aqui para compor o custo real.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="calculator"></i>
+            </div>
+            <h3>Custo Total</h3>
+            <p>Campo calculado automaticamente pelo CLICKNEX (Quantidade x Custo Unitário + Frete).</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="list-tree"></i>
+            </div>
+            <h3>Plano de Contas</h3>
+            <p>Defina a categoria contábil desta compra.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="wallet"></i>
+            </div>
+            <h3>Carteira</h3>
+            <p>Selecione de onde sairá o recurso para este pagamento.</p>
+        </div>
+    </div>
+
+    <p>Após revisar os dados, clique em <strong>[Lançar]</strong>.</p>
+
+    <h2><i data-lucide="calculator" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Cálculo Automático de Custos</h2>
+    <p>O sistema calcula automaticamente o custo total da compra considerando:</p>
+
+    <div class="feature-section">
+        <h3>Fórmula de Cálculo</h3>
+        <p><strong>Custo Total = (Custo Unitário + Frete Unitário) × Quantidade</strong></p>
+        
+        <h4>Exemplo Prático:</h4>
+        <ul>
+            <li>Produto: Matéria Prima X</li>
+            <li>Quantidade: 100 unidades</li>
+            <li>Custo Unitário: R$ 15,00</li>
+            <li>Frete Unitário: R$ 2,00</li>
+            <li><strong>Custo Total: (R$ 15,00 + R$ 2,00) × 100 = R$ 1.700,00</strong></li>
+        </ul>
+    </div>
+
+    <h2><i data-lucide="link" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Integração com Contas a Pagar</h2>
+    <p>Ao registrar uma compra, o sistema automaticamente:</p>
+
+    <ul>
+        <li>Cria um lançamento no módulo de <strong>Contas a Pagar</strong></li>
+        <li>Vincula a despesa ao fornecedor selecionado</li>
+        <li>Categoriza no Plano de Contas especificado</li>
+        <li>Atualiza o saldo da carteira quando o pagamento for baixado</li>
+    </ul>
+
+    <div class="alert-box">
+        <p>
+            <strong><i data-lucide="info" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Sincronização:</strong> 
+            Os lançamentos realizados aqui geram automaticamente uma pendência no seu <strong>Contas a Pagar</strong>, 
+            garantindo que o fluxo financeiro esteja sempre sincronizado com a operação de compras.
+        </p>
+    </div>
+
+    <h2><i data-lucide="package-check" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Gestão de Estoque</h2>
+    <p>Se você utiliza o módulo de estoque integrado, cada compra lançada:</p>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="arrow-up"></i>
+            </div>
+            <h3>Entrada Automática</h3>
+            <p>Aumenta automaticamente a quantidade disponível do produto no estoque.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="trending-up"></i>
+            </div>
+            <h3>Custo Médio</h3>
+            <p>Atualiza o custo médio do produto considerando as novas aquisições.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="history"></i>
+            </div>
+            <h3>Histórico</h3>
+            <p>Mantém o registro completo de todas as entradas para rastreabilidade.</p>
+        </div>
+    </div>
+
+    <h2><i data-lucide="tag" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Classificações de Produtos</h2>
+    <p>Use as classificações para organizar seus produtos por categorias:</p>
+
+    <ul>
+        <li><strong>Matéria Prima:</strong> Insumos básicos para produção</li>
+        <li><strong>Produtos para Revenda:</strong> Itens comprados prontos para venda</li>
+        <li><strong>Material de Consumo:</strong> Itens de uso interno da empresa</li>
+        <li><strong>Embalagens:</strong> Materiais para acondicionamento</li>
+        <li><strong>Insumos:</strong> Materiais auxiliares na produção</li>
+    </ul>
+
+    <div class="tips-box">
+        <h4><i data-lucide="lightbulb" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Dicas Importantes</h4>
+        <ul>
+            <li><strong>Custo Real de Aquisição:</strong> Ao preencher o campo de "Frete Unitário", o CLICKNEX ajuda você a entender o custo real do seu estoque, o que é fundamental para definir sua margem de lucro na hora da venda.</li>
+            <li><strong>Código Interno:</strong> Mantenha um padrão de códigos para facilitar a identificação</li>
+            <li><strong>Classificação Consistente:</strong> Use sempre as mesmas categorias para relatórios precisos</li>
+            <li><strong>Registro Imediato:</strong> Lance as compras assim que receber os produtos</li>
+        </ul>
+    </div>
+
+    <h2><i data-lucide="file-text" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Documentação e Rastreabilidade</h2>
+    <p>Para cada compra registrada, você pode:</p>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="paperclip"></i>
+            </div>
+            <h3>Anexar Documentos</h3>
+            <p>Vincule notas fiscais e comprovantes ao lançamento.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="message-square"></i>
+            </div>
+            <h3>Observações</h3>
+            <p>Registre informações importantes sobre a compra.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-icon">
+                <i data-lucide="eye"></i>
+            </div>
+            <h3>Histórico Completo</h3>
+            <p>Visualize todas as alterações e movimentações do produto.</p>
+        </div>
+    </div>
+
+    <h2><i data-lucide="bar-chart-3" style="width: 24px; height: 24px; display: inline; vertical-align: text-bottom; margin-right: 8px;"></i>Relatórios e Análises</h2>
+    <p>Com os dados de compras, você pode gerar análises sobre:</p>
+
+    <ul>
+        <li>Volume de compras por fornecedor</li>
+        <li>Evolução de custos de produtos ao longo do tempo</li>
+        <li>Categorias de produtos mais adquiridas</li>
+        <li>Comparativo de preços entre fornecedores</li>
+        <li>Impacto do frete no custo final</li>
+    </ul>
+
+    <div class="feature-section">
+        <h3><i data-lucide="trending-down" style="width: 20px; height: 20px; display: inline; vertical-align: text-bottom;"></i> Otimização de Custos</h3>
+        <p>
+            Use os relatórios de compras para identificar oportunidades de negociação com fornecedores, 
+            consolidação de pedidos para reduzir frete e otimização do custo de aquisição.
+        </p>
+    </div>
+
+    <div class="alert-box">
+        <p>
+            <strong><i data-lucide="alert-circle" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Importante:</strong> 
+            Mantenha sempre os dados de compras atualizados para garantir que seus relatórios de margem de lucro 
+            e precificação reflitam os custos reais dos produtos.
+        </p>
+    </div>
+</div>

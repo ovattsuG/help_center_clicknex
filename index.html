@@ -164,12 +164,21 @@
                 <h3 class="nav-title">MÓDULOS DO SISTEMA</h3>
                 
                 <!-- Dashboard -->
-                <a href="#dashboard" class="nav-item" data-section="dashboard">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <path d="M3 3h7v7H3V3zm0 11h7v7H3v-7zm11-11h7v7h-7V3zm0 11h7v7h-7v-7z" stroke="currentColor" stroke-width="1.5"/>
+                <button class="nav-item nav-dropdown" data-dropdown="dashboard-dropdown">
+                    <div class="nav-item-content">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 3h7v7H3V3zm0 11h7v7H3v-7zm11-11h7v7h-7V3zm0 11h7v7h-7v-7z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span>Dashboard</span>
+                    </div>
+                    <svg class="dropdown-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-                    Dashboard
-                </a>
+                </button>
+                <div class="nav-dropdown-content" id="dashboard-dropdown">
+                    <a href="#dashboard" class="nav-item nav-item-sub" data-section="dashboard">Dashboard Geral</a>
+                    <a href="#dashboard-financeiro" class="nav-item nav-item-sub" data-section="dashboard-financeiro">Dashboard Financeiro</a>
+                </div>
                 
                 <!-- Agenda -->
                 <button class="nav-item nav-dropdown" data-dropdown="agenda-dropdown">
@@ -282,6 +291,36 @@
                     <a href="#equipes-operadores" class="nav-item nav-item-sub" data-section="equipes-operadores">Operadores</a>
                     <a href="#equipes-funcoes" class="nav-item nav-item-sub" data-section="equipes-funcoes">Funções</a>
                     <a href="#equipes-setores" class="nav-item nav-item-sub" data-section="equipes-setores">Setores</a>
+                </div>
+                
+                <!-- Financeiro -->
+                <button class="nav-item nav-dropdown" data-dropdown="financeiro-dropdown">
+                    <div class="nav-item-content">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <span>Financeiro</span>
+                    </div>
+                    <svg class="dropdown-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div class="nav-dropdown-content" id="financeiro-dropdown">
+                    <a href="#financeiro-clientes" class="nav-item nav-item-sub" data-section="financeiro-clientes">Clientes</a>
+                    <a href="#financeiro-fornecedores" class="nav-item nav-item-sub" data-section="financeiro-fornecedores">Fornecedores</a>
+                    <a href="#financeiro-plano-contas" class="nav-item nav-item-sub" data-section="financeiro-plano-contas">Plano de Contas</a>
+                    <a href="#financeiro-carteiras" class="nav-item nav-item-sub" data-section="financeiro-carteiras">Carteiras</a>
+                    <a href="#financeiro-contas-receber" class="nav-item nav-item-sub" data-section="financeiro-contas-receber">Contas a Receber</a>
+                    <a href="#financeiro-contas-pagar" class="nav-item nav-item-sub" data-section="financeiro-contas-pagar">Contas a Pagar</a>
+                    <a href="#financeiro-compras" class="nav-item nav-item-sub" data-section="financeiro-compras">Compras</a>
+                    <a href="#financeiro-extrato" class="nav-item nav-item-sub" data-section="financeiro-extrato">Extrato</a>
+                    <a href="#financeiro-importar-extrato" class="nav-item nav-item-sub" data-section="financeiro-importar-extrato">Importar Extrato</a>
+                    <a href="#financeiro-leitor-contas" class="nav-item nav-item-sub" data-section="financeiro-leitor-contas">Leitor de Contas</a>
+                    <a href="#financeiro-fluxo-caixa" class="nav-item nav-item-sub" data-section="financeiro-fluxo-caixa">Fluxo de Caixa</a>
+                    <a href="#financeiro-relatorios" class="nav-item nav-item-sub" data-section="financeiro-relatorios">Relatórios</a>
+                    <a href="#financeiro-planejador" class="nav-item nav-item-sub" data-section="financeiro-planejador">Planejador</a>
+                    <a href="#financeiro-auditoria" class="nav-item nav-item-sub" data-section="financeiro-auditoria">Auditoria</a>
+                    <a href="#financeiro-agente-financeiro" class="nav-item nav-item-sub" data-section="financeiro-agente-financeiro">Agente Financeiro</a>
                 </div>
                 
                 <!-- Sistema -->

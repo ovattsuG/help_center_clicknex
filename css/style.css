@@ -274,7 +274,8 @@ body {
 }
 
 .nav-dropdown-content.open {
-    max-height: 500px;
+    max-height: 1000px;
+    overflow-y: auto;
 }
 
 .nav-item-sub {
@@ -490,6 +491,36 @@ body {
     height: 16px;
 }
 
+/* Navigation Footer */
+.navigation-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-border);
+}
+
+.nav-footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--color-accent-hover);
+    text-decoration: none;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.nav-footer-link:hover {
+    color: var(--color-text);
+}
+
+.nav-footer-link svg {
+    width: 16px;
+    height: 16px;
+}
+
 /* ========================================
    IMAGES
    ======================================== */
@@ -696,19 +727,27 @@ body {
    ======================================== */
 .module-header,
 .document-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
     margin-bottom: var(--spacing-xl);
 }
 
-.module-icon,
-.document-icon {
-    font-size: 48px;
-    margin-bottom: var(--spacing-md);
+.module-header h1,
+.document-header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--color-text);
+    flex: 0 0 auto;
 }
 
 .module-description {
     font-size: 16px;
     color: var(--color-text-secondary);
-    margin-top: var(--spacing-sm);
+    margin: 0;
+    flex-basis: 100%;
 }
 
 /* ========================================
@@ -864,19 +903,20 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 80px;
+    width: 48px;
+    height: 48px;
     background: rgba(30, 58, 138, 0.1);
-    border-radius: 14px;
-    margin-bottom: var(--spacing-md);
-    padding: 16px;
+    border-radius: 10px;
+    margin-right: var(--spacing-md);
+    padding: 10px;
     flex-shrink: 0;
+    vertical-align: middle;
 }
 
 .module-icon i,
 .document-icon i {
-    width: 48px;
-    height: 48px;
+    width: 28px;
+    height: 28px;
     color: var(--color-accent-hover);
     stroke-width: 1.5;
     flex-shrink: 0;
