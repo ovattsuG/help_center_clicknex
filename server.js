@@ -9,7 +9,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 const mimeTypes = {
     '.html': 'text/html',
@@ -24,7 +24,7 @@ const mimeTypes = {
 };
 
 const server = http.createServer((req, res) => {
-    let filePath = '.' + req.url;
+    let filePath = '.' + decodeURIComponent(req.url.split('?')[0]);
     if (filePath === './') {
         filePath = './index.html';
     }

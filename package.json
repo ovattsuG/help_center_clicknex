@@ -1,0 +1,12 @@
+{
+  "name": "help-center-clicknex",
+  "version": "1.0.0",
+  "description": "Central de ajuda ClickNex",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
